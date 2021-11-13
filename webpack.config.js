@@ -25,13 +25,22 @@ module.exports = {
     devtool: false,
     entry: './sample.js',
     target: 'node',
+    mode: 'production',
     resolve: {extensions: ['.js', '.json']},
     externals: getModules(),
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.?schema.json$/,
-                loader: './index.js'
+                use: {
+                    loader: './index.js',
+                    options: {
+                        allErrors: false,
+                        messages: false,
+                        code: { optimize: 5 },
+		    }
+                },
+                type: 'javascript/auto'
             }
         ]
     },
