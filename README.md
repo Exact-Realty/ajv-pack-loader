@@ -10,7 +10,7 @@ This is a webpack loader for [ajv-pack](https://github.com/epoberezkin/ajv-pack)
 We depend on two npm packages as `peerDependencies`, so you should install them first:
 
 ``` shell
-npm install ajv ajv-pack
+npm install ajv ajv-formats
 ```
 
 Now you could install the loader:

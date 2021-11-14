@@ -1,7 +1,7 @@
 {
   "name": "@Exact-Realty/ajv-pack-loader",
   "repository": "git://github.com/Exact-Realty/ajv-pack-loader",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,10 +11,12 @@
   "license": "MIT",
   "dependencies": {
     "ajv": "^8.8.0",
+    "ajv-formats": "^2.1.1",
     "loader-utils": "^1.1.0"
   },
   "peerDependencies": {
-    "ajv": "*"
+    "ajv": "*",
+    "ajv-formats": "*"
   },
   "devDependencies": {
     "ava": "^3.15.0",
@@ -24,7 +26,7 @@
     "webpack-cli": "^4.9.1"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "ava": {
     "files": [

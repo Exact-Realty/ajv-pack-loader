@@ -1,5 +1,6 @@
 'use strict';
 const Ajv = require('ajv');
+const ajvFormats = require('ajv-formats');
 const pack = require('ajv/dist/standalone').default;
 const loaderUtils = require('loader-utils');
 
@@ -11,6 +12,7 @@ module.exports = function(source, sourceMap) {
 
     const callback = this.async();
     const ajv = new Ajv(query);
+    ajvFormats(ajv);
     const schema = ajv.compile(JSON.parse(source));
 
     callback(

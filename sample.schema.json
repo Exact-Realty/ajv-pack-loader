@@ -8,6 +8,10 @@
 	"lastName": {
 	    "type": "string"
 	},
+	"website": {
+	    "type": "string",
+	    "format": "uri"
+	},
 	"age": {
 	    "description": "Age in years",
 	    "type": "integer",
